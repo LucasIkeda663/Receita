@@ -1,0 +1,224 @@
+
+body {
+position: absolute;
+width: 1440px;
+height: 1024px;
+left: 0px;
+top: 0px;
+background-color: #143ab5;
+}
+
+div.bg {
+  background-color: #ffffff;
+}
+
+
+
+div.r5 {
+
+position: absolute;
+width: 1040px;
+height: 952px;
+left: 200px;
+top: 72px;
+
+background: rgba(255, 255, 255, 0.81);
+}
+
+/* Rectangle 11 */
+div.r11 {
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 736px;
+
+background: #EEBE76;
+}
+
+div.r8 {
+
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 346px;
+
+background: #EEBE76;
+}
+
+/* Rectangle 9 */
+div.r9 {
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 480px;
+
+background: #EEBE76;
+}
+
+/* Rectangle 10 */
+div.r10 {
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 606px;
+
+background: #EEBE76;
+
+}
+/* Rectangle 7 */
+div.r7 {
+
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 216px;
+
+background: #EEBE76;
+}
+div.r6 {
+
+/* Rectangle 6 */
+
+position: absolute;
+width: 1440px;
+height: 72px;
+left: 0px;
+top: 0px;
+
+background: #FFDEAD;
+
+}
+
+div.r1 {
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 866px;
+
+background: #EEBE76;
+}
+div.r2 {
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 996px;
+
+background: #EEBE76;
+}
+
+#cr {
+position: absolute;
+left: 599px;
+
+font-family: Laila;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 111.5%;
+/* or 40px */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.005em;
+
+color: #000000;
+
+}
+
+/* Livro */
+
+position: absolute;
+width: 86px;
+height: 40px;
+left: 677px;
+top: 492px;
+
+font-family: Laila;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 111.5%;
+/* or 40px */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.005em;
+
+color: #000000;
+
+
+
+/* Receita */
+
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 346px;
+
+font-family: Laila;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 111.5%;
+/* or 40px */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.005em;
+
+color: #000000;
+
+
+
+/* G1 Gourmet */
+body {
+
+position: absolute;
+width: 350px;
+height: 56px;
+left: 545px;
+top: 8px;
+}
+
+font-family: Laila;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 111.5%;
+/* or 54px */
+display: flex;
+align-items: center;
+letter-spacing: 0.005em;
+
+color: #000000;
+
+
+
+/* Funcionàrio */
+
+position: absolute;
+width: 956px;
+height: 64px;
+left: 242px;
+top: 216px;
+
+font-family: Laila;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 111.5%;
+/* or 40px */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.005em;
+
+color: #000000;

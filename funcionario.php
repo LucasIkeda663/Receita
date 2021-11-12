@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = (isset($_POST["nome"]) && $_POST["nome"] != null) ? $_POST["nome"] : "";
     $rg = (isset($_POST["rg"]) && $_POST["rg"] != null) ? $_POST["rg"] : "";
     $data_adm = (isset($_POST["data_adm"]) && $_POST["data_adm"] != null) ? $_POST["data_adm"] : "";
-    $data_demissao = (isset($_POST["data_demissao"]) && $_POST["data_demissao"] != null) ? $_POST["data_demissao"] : "";
+    $data_demissao = (isset($_POST["data_demissao"]) && $_POST["data_demissao"] != null) ? $_POST["data_demissao"] : null;
     $salario = (isset($_POST["salario"]) && $_POST["salario"] != null) ? $_POST["salario"] : NULL;
     $cargo = (isset($_POST["cargo"]) && $_POST["cargo"] != null) ? $_POST["cargo"] : "";
     $nome_fantasia = (isset($_POST["nome_fantasia"]) && $_POST["nome_fantasia"] != null) ? $_POST["nome_fantasia"] : "";
@@ -47,8 +47,8 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "save" && $nome != "") {
         $stmt->bindParam(3, $data_adm);
         $stmt->bindParam(4, $data_demissao);
         $stmt->bindParam(5, $salario);
-        $stmt->bindParam(7, $cargo);
-        $stmt->bindParam(6, $nome_fantasia);
+        $stmt->bindParam(6, $cargo);
+        $stmt->bindParam(7, $nome_fantasia);
         if ($stmt->execute()) {
             if ($stmt->rowCount() > 0) {
                 echo "Dados cadastrados com sucesso!";
@@ -157,6 +157,8 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "del" && $id != "") {
                 // Preenche o celular no campo celular com um valor "value"
                  if (isset($data_demissao) && $data_demissao != null || $data_demissao != "") {
                     echo "value=\"{$data_demissao}\"";
+
+                    
                 }
                 ?> />
                 Salario:
@@ -175,29 +177,22 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "del" && $id != "") {
                 if (isset($nome_fantasia) && $nome_fantasia!= null || $nome_fantasia != "") {
                     echo "value=\"{$nome_fantasia}\"";
                  }
-                ?> />
+                   ?> />
 
+                <select id="id" name="cargo">
+                 <option>Cargo</option>   
+                <?php
+                    $select = $conexao->prepare("SELECT * FROM g1_cargo ORDER BY descricao ASC");
+                    $select->execute();
+                    $fetchAll = $select->fetchAll();
+                    foreach($fetchAll as $cargos)
+                    {
+                        echo '<option value="'.$cargos["id"].'">'.$cargos["descricao"].'</option>';
+                    }
 
-                        <?php
-                            $sql = " SELECT * FROM g1_cargo";
-                            try {
-                                $stmt = $conexao -> prepare($sql);
-                                $stmt -> execute();
-                                $results = $stmt -> fetchAll();
-                            }
-                            catch(Exception $ex){
-                                echo ($ex -> getMessage());
-                        
-                            }
-                        ?>
-                        <!--Apresentando as opções em forma de dropbox-->
-                        <label for="id">Cargo</label>
-                        <select id="id" name="id">
-                        <option>Cargo</option>
-                        <?php foreach($results as $output) {?>
-                    <option value='<?php $output["id"];?>'><?php echo $output["descricao"];?></option>
-                        <?php } ?>
-                    </select>
+                ?>
+
+       
                <input type="submit" value="salvar" />
                <input type="reset" value="Novo" />
                <hr>

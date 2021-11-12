@@ -231,7 +231,7 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "del" && $id != "") {
                 ?>
                 
             </table>
-                <a href="index.html"><h3>voltar ao menu anterio
+                <a href="index.html"><h3>voltar ao menu anterio</h3></a>
 
         </body>
     </html>
